@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>匠心·万象 | Chinese Arts & Crafts Encyclopedia</title>
-    <!-- Font Awesome 6 -->
+    <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -124,7 +124,7 @@
 
         .grid-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin: 1.5rem 0 1rem;
         }
@@ -136,11 +136,23 @@
             box-shadow: 0 8px 16px -8px #ac947e;
             border: 1px solid #e5d5c4;
             transition: transform 0.15s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
             transform: translateY(-5px);
             border-color: #b38d67;
+        }
+
+        .craft-icon {
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            background: #f7efe6;
+            border-radius: 60px;
+            padding: 0.5rem;
+            border: 1px solid #eddac9;
         }
 
         .chinese-term {
@@ -169,6 +181,7 @@
             background: #fcf8f3;
             border-radius: 20px;
             padding: 1rem;
+            margin-top: auto;
         }
 
         .desc-bilingual .zh {
@@ -200,6 +213,13 @@
             text-align: center;
             border: 1px solid #dccbbc;
             box-shadow: 0 4px 6px #e2d3c4;
+        }
+
+        .tool-item .craft-icon {
+            font-size: 2.5rem;
+            background: none;
+            border: none;
+            margin-bottom: 0.2rem;
         }
 
         .tool-item .chinese-term {
@@ -234,6 +254,13 @@
             padding: 1.2rem 1.5rem;
             flex: 1 1 200px;
             border: 1px solid #d9c3b0;
+            text-align: center;
+        }
+
+        .stitch-pro-card .craft-icon {
+            font-size: 2.8rem;
+            background: none;
+            border: none;
         }
 
         /* material duo */
@@ -250,6 +277,12 @@
             background: #fcf6ef;
             border-radius: 40px;
             padding: 1.5rem;
+        }
+        .material-col li {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 0.8rem 0;
         }
 
         .rank-badge {
@@ -304,114 +337,111 @@
         <div class="sub"><i class="fas fa-needle"></i> 刺绣 · 剪纸 · 泥塑 · 灯笼 · 风筝 · 蜡染 · 景泰蓝 · 木雕 <i class="fas fa-cut"></i></div>
     </div>
 
-    <!-- ========== 刺绣部分 (保持原专业体系) ========== -->
+    <!-- ========== 刺绣部分 ========== -->
     <div class="section-title" id="schools"><i class="fas fa-palette"></i> 刺绣 · Embroidery</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">苏绣</div><div class="pinyin">Sū xiù</div><div class="english-term">Su embroidery</div><div class="desc-bilingual"><div class="zh">苏州，双面绣，精细雅洁</div><div class="en">Suzhou, double-sided, elegant</div></div></div>
-        <div class="card"><div class="chinese-term">湘绣</div><div class="pinyin">Xiāng xiù</div><div class="english-term">Xiang embroidery</div><div class="desc-bilingual"><div class="zh">湖南，鬅毛针，狮虎写实</div><div class="en">Hunan, fuzzy stitch, tiger/lion</div></div></div>
-        <div class="card"><div class="chinese-term">蜀绣</div><div class="pinyin">Shǔ xiù</div><div class="english-term">Shu embroidery</div><div class="desc-bilingual"><div class="zh">四川，明快严谨，花鸟鱼虫</div><div class="en">Sichuan, bright, flowers & fish</div></div></div>
-        <div class="card"><div class="chinese-term">粤绣</div><div class="pinyin">Yuè xiù</div><div class="english-term">Yue embroidery</div><div class="desc-bilingual"><div class="zh">广东，金银线，富丽堂皇</div><div class="en">Guangdong, gold thread, bold</div></div></div>
-        <div class="card"><div class="chinese-term">京绣</div><div class="pinyin">Jīng xiù</div><div class="english-term">Beijing embroidery</div><div class="desc-bilingual"><div class="zh">宫廷风格，龙纹，盘金</div><div class="en">court style, dragon, couched gold</div></div></div>
-        <div class="card"><div class="chinese-term">苗绣</div><div class="pinyin">Miáo xiù</div><div class="english-term">Miao embroidery</div><div class="desc-bilingual"><div class="zh">贵州，图腾，彩色浓郁</div><div class="en">Guizhou, totems, vibrant</div></div></div>
+        <div class="card"><div class="craft-icon">🪡🌸</div><div class="chinese-term">苏绣</div><div class="pinyin">Sū xiù</div><div class="english-term">Su embroidery</div><div class="desc-bilingual"><div class="zh">苏州，双面绣，精细雅洁</div><div class="en">Suzhou, double-sided, elegant</div></div></div>
+        <div class="card"><div class="craft-icon">🐅🪡</div><div class="chinese-term">湘绣</div><div class="pinyin">Xiāng xiù</div><div class="english-term">Xiang embroidery</div><div class="desc-bilingual"><div class="zh">湖南，鬅毛针，狮虎写实</div><div class="en">Hunan, fuzzy stitch, tiger/lion</div></div></div>
+        <div class="card"><div class="craft-icon">🦚🌸</div><div class="chinese-term">蜀绣</div><div class="pinyin">Shǔ xiù</div><div class="english-term">Shu embroidery</div><div class="desc-bilingual"><div class="zh">四川，明快严谨，花鸟鱼虫</div><div class="en">Sichuan, bright, flowers & fish</div></div></div>
+        <div class="card"><div class="craft-icon">🐉✨</div><div class="chinese-term">粤绣</div><div class="pinyin">Yuè xiù</div><div class="english-term">Yue embroidery</div><div class="desc-bilingual"><div class="zh">广东，金银线，富丽堂皇</div><div class="en">Guangdong, gold thread, bold</div></div></div>
+        <div class="card"><div class="craft-icon">👑🐲</div><div class="chinese-term">京绣</div><div class="pinyin">Jīng xiù</div><div class="english-term">Beijing embroidery</div><div class="desc-bilingual"><div class="zh">宫廷风格，龙纹，盘金</div><div class="en">court style, dragon, couched gold</div></div></div>
+        <div class="card"><div class="craft-icon">🌿🌈</div><div class="chinese-term">苗绣</div><div class="pinyin">Miáo xiù</div><div class="english-term">Miao embroidery</div><div class="desc-bilingual"><div class="zh">贵州，图腾，彩色浓郁</div><div class="en">Guizhou, totems, vibrant</div></div></div>
     </div>
 
-    <!-- 针法体系 (保留精简) -->
+    <!-- 针法体系 -->
     <div class="stitch-pro-row">
-        <div class="stitch-pro-card"><span class="chinese-term">齐针</span> <span class="pinyin">qí zhēn</span> <br><span class="english-term">straight stitch</span> </div>
-        <div class="stitch-pro-card"><span class="chinese-term">施针</span> <span class="pinyin">shī zhēn</span> <br><span class="english-term">laid stitch</span> </div>
-        <div class="stitch-pro-card"><span class="chinese-term">鬅毛针</span> <span class="pinyin">péng máo zhēn</span> <br><span class="english-term">fuzzy stitch</span> </div>
-        <div class="stitch-pro-card"><span class="chinese-term">套针</span> <span class="pinyin">tào zhēn</span> <br><span class="english-term">split stitch</span> </div>
-        <div class="stitch-pro-card"><span class="chinese-term">网绣</span> <span class="pinyin">wǎng xiù</span> <br><span class="english-term">net embroidery</span> </div>
+        <div class="stitch-pro-card"><div class="craft-icon">📏🪡</div><span class="chinese-term">齐针</span> <span class="pinyin">qí zhēn</span> <br><span class="english-term">straight stitch</span> </div>
+        <div class="stitch-pro-card"><div class="craft-icon">📐🪡</div><span class="chinese-term">施针</span> <span class="pinyin">shī zhēn</span> <br><span class="english-term">laid stitch</span> </div>
+        <div class="stitch-pro-card"><div class="craft-icon">🐯🪡</div><span class="chinese-term">鬅毛针</span> <span class="pinyin">péng máo zhēn</span> <br><span class="english-term">fuzzy stitch</span> </div>
+        <div class="stitch-pro-card"><div class="craft-icon">🔀🪡</div><span class="chinese-term">套针</span> <span class="pinyin">tào zhēn</span> <br><span class="english-term">split stitch</span> </div>
+        <div class="stitch-pro-card"><div class="craft-icon">🕸️🪡</div><span class="chinese-term">网绣</span> <span class="pinyin">wǎng xiù</span> <br><span class="english-term">net embroidery</span> </div>
     </div>
 
-    <!-- ========== 新增手工艺品类 ========== -->
-
-    <!-- 剪纸 Paper-cutting -->
+    <!-- ========== 剪纸 ========== -->
     <div class="section-title" id="paper"><i class="fas fa-cut"></i> 剪纸 · Paper-cutting</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">北方剪纸</div><div class="pinyin">běi fāng jiǎn zhǐ</div><div class="english-term">Northern style</div><div class="desc-bilingual"><div class="zh">粗犷豪放，陕西、山东为代表</div><div class="en">bold, rustic (Shaanxi, Shandong)</div></div></div>
-        <div class="card"><div class="chinese-term">南方剪纸</div><div class="pinyin">nán fāng jiǎn zhǐ</div><div class="english-term">Southern style</div><div class="desc-bilingual"><div class="zh">细腻精巧，广东佛山、福建</div><div class="en">delicate, detailed (Foshan, Fujian)</div></div></div>
-        <div class="card"><div class="chinese-term">套色剪纸</div><div class="pinyin">tào sè jiǎn zhǐ</div><div class="english-term">multi-color papercut</div><div class="desc-bilingual"><div class="zh">多种色彩套叠</div><div class="en">overlaid colors</div></div></div>
-        <div class="card"><div class="chinese-term">立体剪纸</div><div class="pinyin">lì tǐ jiǎn zhǐ</div><div class="english-term">3D papercut</div><div class="desc-bilingual"><div class="zh">可站立或悬挂</div><div class="en">stand-up / hanging</div></div></div>
+        <div class="card"><div class="craft-icon">❄️✂️</div><div class="chinese-term">北方剪纸</div><div class="pinyin">běi fāng jiǎn zhǐ</div><div class="english-term">Northern style</div><div class="desc-bilingual"><div class="zh">粗犷豪放，陕西、山东为代表</div><div class="en">bold, rustic (Shaanxi, Shandong)</div></div></div>
+        <div class="card"><div class="craft-icon">🌺✂️</div><div class="chinese-term">南方剪纸</div><div class="pinyin">nán fāng jiǎn zhǐ</div><div class="english-term">Southern style</div><div class="desc-bilingual"><div class="zh">细腻精巧，广东佛山、福建</div><div class="en">delicate, detailed (Foshan, Fujian)</div></div></div>
+        <div class="card"><div class="craft-icon">🌈✂️</div><div class="chinese-term">套色剪纸</div><div class="pinyin">tào sè jiǎn zhǐ</div><div class="english-term">multi-color papercut</div><div class="desc-bilingual"><div class="zh">多种色彩套叠</div><div class="en">overlaid colors</div></div></div>
+        <div class="card"><div class="craft-icon">📦✂️</div><div class="chinese-term">立体剪纸</div><div class="pinyin">lì tǐ jiǎn zhǐ</div><div class="english-term">3D papercut</div><div class="desc-bilingual"><div class="zh">可站立或悬挂</div><div class="en">stand-up / hanging</div></div></div>
     </div>
 
-    <!-- 泥塑 Clay Sculpture -->
+    <!-- ========== 泥塑 ========== -->
     <div class="section-title" id="clay"><i class="fas fa-paint-brush"></i> 泥塑 · Clay Sculpture</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">天津泥人张</div><div class="pinyin">Tiānjīn Ní rén Zhāng</div><div class="english-term">Zhang's Clay Figurines</div><div class="desc-bilingual"><div class="zh">清代至今，人物生动</div><div class="en">lively figures since Qing</div></div></div>
-        <div class="card"><div class="chinese-term">惠山泥人</div><div class="pinyin">Huìshān ní rén</div><div class="english-term">Huishan clay figurines</div><div class="desc-bilingual"><div class="zh">江苏无锡，阿福为代表</div><div class="en">Wuxi, "A Fu" dolls</div></div></div>
-        <div class="card"><div class="chinese-term">凤翔泥塑</div><div class="pinyin">Fèngxiáng ní sù</div><div class="english-term">Fengxiang painted clay</div><div class="desc-bilingual"><div class="zh">陕西，彩绘挂件</div><div class="en">Shaanxi, colorful pendants</div></div></div>
-        <div class="card"><div class="chinese-term">泥咕咕</div><div class="pinyin">ní gū gū</div><div class="english-term">Nigugu (whistle clay toy)</div><div class="desc-bilingual"><div class="zh">河南浚县，可吹响</div><div class="en">Xun County, whistle toys</div></div></div>
+        <div class="card"><div class="craft-icon">👨‍🦰🏺</div><div class="chinese-term">天津泥人张</div><div class="pinyin">Tiānjīn Ní rén Zhāng</div><div class="english-term">Zhang's Clay Figurines</div><div class="desc-bilingual"><div class="zh">清代至今，人物生动</div><div class="en">lively figures since Qing</div></div></div>
+        <div class="card"><div class="craft-icon">👶🏺</div><div class="chinese-term">惠山泥人</div><div class="pinyin">Huìshān ní rén</div><div class="english-term">Huishan clay figurines</div><div class="desc-bilingual"><div class="zh">江苏无锡，阿福为代表</div><div class="en">Wuxi, "A Fu" dolls</div></div></div>
+        <div class="card"><div class="craft-icon">🐯🏺</div><div class="chinese-term">凤翔泥塑</div><div class="pinyin">Fèngxiáng ní sù</div><div class="english-term">Fengxiang painted clay</div><div class="desc-bilingual"><div class="zh">陕西，彩绘挂件</div><div class="en">Shaanxi, colorful pendants</div></div></div>
+        <div class="card"><div class="craft-icon">🎺🏺</div><div class="chinese-term">泥咕咕</div><div class="pinyin">ní gū gū</div><div class="english-term">Nigugu (whistle clay toy)</div><div class="desc-bilingual"><div class="zh">河南浚县，可吹响</div><div class="en">Xun County, whistle toys</div></div></div>
     </div>
 
-    <!-- 灯笼 Lanterns -->
+    <!-- ========== 灯笼 ========== -->
     <div class="section-title" id="lantern"><i class="fas fa-lightbulb"></i> 灯笼 · Lanterns</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">宫灯</div><div class="pinyin">gōng dēng</div><div class="english-term">palace lantern</div><div class="desc-bilingual"><div class="zh">六角/八角，宫廷造型</div><div class="en">hexagonal, imperial style</div></div></div>
-        <div class="card"><div class="chinese-term">纱灯</div><div class="pinyin">shā dēng</div><div class="english-term">gauze lantern</div><div class="desc-bilingual"><div class="zh">蒙纱，手绘图案</div><div class="en">covered with gauze, hand-painted</div></div></div>
-        <div class="card"><div class="chinese-term">走马灯</div><div class="pinyin">zǒu mǎ dēng</div><div class="english-term">trotting horse lantern</div><div class="desc-bilingual"><div class="zh">光影旋转，故事画面</div><div class="en">rotating shadows, story scenes</div></div></div>
-        <div class="card"><div class="chinese-term">孔明灯</div><div class="pinyin">Kǒngmíng dēng</div><div class="english-term">sky lantern</div><div class="desc-bilingual"><div class="zh">祈福放飞</div><div class="en">floating for wishes</div></div></div>
+        <div class="card"><div class="craft-icon">🏮👑</div><div class="chinese-term">宫灯</div><div class="pinyin">gōng dēng</div><div class="english-term">palace lantern</div><div class="desc-bilingual"><div class="zh">六角/八角，宫廷造型</div><div class="en">hexagonal, imperial style</div></div></div>
+        <div class="card"><div class="craft-icon">🏮🎨</div><div class="chinese-term">纱灯</div><div class="pinyin">shā dēng</div><div class="english-term">gauze lantern</div><div class="desc-bilingual"><div class="zh">蒙纱，手绘图案</div><div class="en">covered with gauze, hand-painted</div></div></div>
+        <div class="card"><div class="craft-icon">🏮🐴</div><div class="chinese-term">走马灯</div><div class="pinyin">zǒu mǎ dēng</div><div class="english-term">trotting horse lantern</div><div class="desc-bilingual"><div class="zh">光影旋转，故事画面</div><div class="en">rotating shadows, story scenes</div></div></div>
+        <div class="card"><div class="craft-icon">🏮✨</div><div class="chinese-term">孔明灯</div><div class="pinyin">Kǒngmíng dēng</div><div class="english-term">sky lantern</div><div class="desc-bilingual"><div class="zh">祈福放飞</div><div class="en">floating for wishes</div></div></div>
     </div>
 
-    <!-- 风筝 Kites -->
+    <!-- ========== 风筝 ========== -->
     <div class="section-title" id="kite"><i class="fas fa-wind"></i> 风筝 · Kites</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">潍坊风筝</div><div class="pinyin">Wéifāng fēngzheng</div><div class="english-term">Weifang kite</div><div class="desc-bilingual"><div class="zh">世界风筝之都，龙头蜈蚣</div><div class="en">"Kite capital", dragon-centipede</div></div></div>
-        <div class="card"><div class="chinese-term">北京风筝</div><div class="pinyin">Běijīng fēngzheng</div><div class="english-term">Beijing kite</div><div class="desc-bilingual"><div class="zh">沙燕儿最为经典</div><div class="en">swallow-shaped classic</div></div></div>
-        <div class="card"><div class="chinese-term">南通板鹞</div><div class="pinyin">Nántōng bǎn yào</div><div class="english-term">Nantong panel kite</div><div class="desc-bilingual"><div class="zh">带哨口，发出音响</div><div class="en">with whistles, sounds in wind</div></div></div>
-        <div class="card"><div class="chinese-term">台湾风筝</div><div class="pinyin">Táiwān fēngzheng</div><div class="english-term">Taiwanese kite</div><div class="desc-bilingual"><div class="zh">八角形，土著图腾</div><div class="en">octagonal, indigenous motifs</div></div></div>
+        <div class="card"><div class="craft-icon">🪁🐉</div><div class="chinese-term">潍坊风筝</div><div class="pinyin">Wéifāng fēngzheng</div><div class="english-term">Weifang kite</div><div class="desc-bilingual"><div class="zh">世界风筝之都，龙头蜈蚣</div><div class="en">"Kite capital", dragon-centipede</div></div></div>
+        <div class="card"><div class="craft-icon">🪁🐦</div><div class="chinese-term">北京风筝</div><div class="pinyin">Běijīng fēngzheng</div><div class="english-term">Beijing kite</div><div class="desc-bilingual"><div class="zh">沙燕儿最为经典</div><div class="en">swallow-shaped classic</div></div></div>
+        <div class="card"><div class="craft-icon">🪁🔊</div><div class="chinese-term">南通板鹞</div><div class="pinyin">Nántōng bǎn yào</div><div class="english-term">Nantong panel kite</div><div class="desc-bilingual"><div class="zh">带哨口，发出音响</div><div class="en">with whistles, sounds in wind</div></div></div>
+        <div class="card"><div class="craft-icon">🪁🏝️</div><div class="chinese-term">台湾风筝</div><div class="pinyin">Táiwān fēngzheng</div><div class="english-term">Taiwanese kite</div><div class="desc-bilingual"><div class="zh">八角形，土著图腾</div><div class="en">octagonal, indigenous motifs</div></div></div>
     </div>
 
-    <!-- 蜡染 Batik -->
+    <!-- ========== 蜡染 ========== -->
     <div class="section-title" id="batik"><i class="fas fa-fan"></i> 蜡染 · Batik</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">苗族蜡染</div><div class="pinyin">Miáo zú là rǎn</div><div class="english-term">Miao batik</div><div class="desc-bilingual"><div class="zh">贵州，铜刀画蜡，蓝白分明</div><div class="en">Guizhou, copper knife, blue-white</div></div></div>
-        <div class="card"><div class="chinese-term">布依族蜡染</div><div class="pinyin">Bùyī zú là rǎn</div><div class="english-term">Bouyei batik</div><div class="desc-bilingual"><div class="zh">螺旋纹、几何图形</div><div class="en">spirals, geometric</div></div></div>
-        <div class="card"><div class="chinese-term">瑶族蜡染</div><div class="pinyin">Yáo zú là rǎn</div><div class="english-term">Yao batik</div><div class="desc-bilingual"><div class="zh">广西，多用粗布</div><div class="en">Guangxi, coarse cloth</div></div></div>
-        <div class="card"><div class="chinese-term">彩色蜡染</div><div class="pinyin">cǎi sè là rǎn</div><div class="english-term">color batik</div><div class="desc-bilingual"><div class="zh">多色套染，现代创新</div><div class="en">multi-color, modern</div></div></div>
+        <div class="card"><div class="craft-icon">🟦⬜🖌️</div><div class="chinese-term">苗族蜡染</div><div class="pinyin">Miáo zú là rǎn</div><div class="english-term">Miao batik</div><div class="desc-bilingual"><div class="zh">贵州，铜刀画蜡，蓝白分明</div><div class="en">Guizhou, copper knife, blue-white</div></div></div>
+        <div class="card"><div class="craft-icon">🌀⬜</div><div class="chinese-term">布依族蜡染</div><div class="pinyin">Bùyī zú là rǎn</div><div class="english-term">Bouyei batik</div><div class="desc-bilingual"><div class="zh">螺旋纹、几何图形</div><div class="en">spirals, geometric</div></div></div>
+        <div class="card"><div class="craft-icon">⛰️⬜</div><div class="chinese-term">瑶族蜡染</div><div class="pinyin">Yáo zú là rǎn</div><div class="english-term">Yao batik</div><div class="desc-bilingual"><div class="zh">广西，多用粗布</div><div class="en">Guangxi, coarse cloth</div></div></div>
+        <div class="card"><div class="craft-icon">🌈⬜</div><div class="chinese-term">彩色蜡染</div><div class="pinyin">cǎi sè là rǎn</div><div class="english-term">color batik</div><div class="desc-bilingual"><div class="zh">多色套染，现代创新</div><div class="en">multi-color, modern</div></div></div>
     </div>
 
-    <!-- 景泰蓝 Cloisonné -->
+    <!-- ========== 景泰蓝 ========== -->
     <div class="section-title" id="cloisonne"><i class="fas fa-gem"></i> 景泰蓝 · Cloisonné</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">掐丝珐琅</div><div class="pinyin">qiā sī fà láng</div><div class="english-term">Cloisonné enamel</div><div class="desc-bilingual"><div class="zh">铜胎，掐丝，点蓝</div><div class="en">copper body, wire, enamel fill</div></div></div>
-        <div class="card"><div class="chinese-term">画珐琅</div><div class="pinyin">huà fà láng</div><div class="english-term">painted enamel</div><div class="desc-bilingual"><div class="zh">直接彩绘，广州工艺</div><div class="en">direct painting, Canton style</div></div></div>
-        <div class="card"><div class="chinese-term">银胎景泰蓝</div><div class="pinyin">yín tāi jǐng tài lán</div><div class="english-term">silver-body cloisonné</div><div class="desc-bilingual"><div class="zh">更为珍贵</div><div class="en">more precious</div></div></div>
-        <div class="card"><div class="chinese-term">现代景泰蓝</div><div class="pinyin">xiàn dài jǐng tài lán</div><div class="english-term">modern cloisonné</div><div class="desc-bilingual"><div class="zh">创新器型，壁画</div><div class="en">new forms, wall art</div></div></div>
+        <div class="card"><div class="craft-icon">🔷🔶</div><div class="chinese-term">掐丝珐琅</div><div class="pinyin">qiā sī fà láng</div><div class="english-term">Cloisonné enamel</div><div class="desc-bilingual"><div class="zh">铜胎，掐丝，点蓝</div><div class="en">copper body, wire, enamel fill</div></div></div>
+        <div class="card"><div class="craft-icon">🎨🖌️</div><div class="chinese-term">画珐琅</div><div class="pinyin">huà fà láng</div><div class="english-term">painted enamel</div><div class="desc-bilingual"><div class="zh">直接彩绘，广州工艺</div><div class="en">direct painting, Canton style</div></div></div>
+        <div class="card"><div class="craft-icon">🥈🔷</div><div class="chinese-term">银胎景泰蓝</div><div class="pinyin">yín tāi jǐng tài lán</div><div class="english-term">silver-body cloisonné</div><div class="desc-bilingual"><div class="zh">更为珍贵</div><div class="en">more precious</div></div></div>
+        <div class="card"><div class="craft-icon">🏛️🔷</div><div class="chinese-term">现代景泰蓝</div><div class="pinyin">xiàn dài jǐng tài lán</div><div class="english-term">modern cloisonné</div><div class="desc-bilingual"><div class="zh">创新器型，壁画</div><div class="en">new forms, wall art</div></div></div>
     </div>
 
-    <!-- 木雕 Wood Carving -->
+    <!-- ========== 木雕 ========== -->
     <div class="section-title" id="wood"><i class="fas fa-tree"></i> 木雕 · Wood Carving</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">东阳木雕</div><div class="pinyin">Dōngyáng mù diāo</div><div class="english-term">Dongyang wood carving</div><div class="desc-bilingual"><div class="zh">浙江，浮雕多层，建筑装饰</div><div class="en">Zhejiang, multi-layer relief</div></div></div>
-        <div class="card"><div class="chinese-term">潮州木雕</div><div class="pinyin">Cháozhōu mù diāo</div><div class="english-term">Chaozhou wood carving</div><div class="desc-bilingual"><div class="zh">广东，贴金，镂通雕</div><div class="en">Guangdong, gold-leaf, openwork</div></div></div>
-        <div class="card"><div class="chinese-term">徽州木雕</div><div class="pinyin">Huīzhōu mù diāo</div><div class="english-term">Huizhou wood carving</div><div class="desc-bilingual"><div class="zh">安徽，民居构件</div><div class="en">Anhui, architectural</div></div></div>
-        <div class="card"><div class="chinese-term">剑川木雕</div><div class="pinyin">Jiànchuān mù diāo</div><div class="english-term">Jianchuan wood carving</div><div class="desc-bilingual"><div class="zh">云南白族，精细人物</div><div class="en">Yunnan Bai ethnic, fine figures</div></div></div>
+        <div class="card"><div class="craft-icon">🌳🔪</div><div class="chinese-term">东阳木雕</div><div class="pinyin">Dōngyáng mù diāo</div><div class="english-term">Dongyang wood carving</div><div class="desc-bilingual"><div class="zh">浙江，浮雕多层，建筑装饰</div><div class="en">Zhejiang, multi-layer relief</div></div></div>
+        <div class="card"><div class="craft-icon">🥇🔪</div><div class="chinese-term">潮州木雕</div><div class="pinyin">Cháozhōu mù diāo</div><div class="english-term">Chaozhou wood carving</div><div class="desc-bilingual"><div class="zh">广东，贴金，镂通雕</div><div class="en">Guangdong, gold-leaf, openwork</div></div></div>
+        <div class="card"><div class="craft-icon">🏘️🔪</div><div class="chinese-term">徽州木雕</div><div class="pinyin">Huīzhōu mù diāo</div><div class="english-term">Huizhou wood carving</div><div class="desc-bilingual"><div class="zh">安徽，民居构件</div><div class="en">Anhui, architectural</div></div></div>
+        <div class="card"><div class="craft-icon">👥🔪</div><div class="chinese-term">剑川木雕</div><div class="pinyin">Jiànchuān mù diāo</div><div class="english-term">Jianchuan wood carving</div><div class="desc-bilingual"><div class="zh">云南白族，精细人物</div><div class="en">Yunnan Bai ethnic, fine figures</div></div></div>
     </div>
 
-    <!-- 保留部分原有精华：工具/材料/补子等，但精简以避免重复，同时展示更多品类 -->
+    <!-- 共通工具 -->
     <div class="section-title"><i class="fas fa-tools"></i> 共通工具 · Common Tools</div>
     <div class="tools-grid">
-        <div class="tool-item"><span class="chinese-term">刻刀</span><div class="pinyin">kè dāo</div><div class="english-term">carving knife</div></div>
-        <div class="tool-item"><span class="chinese-term">剪刀</span><div class="pinyin">jiǎn dāo</div><div class="english-term">scissors</div></div>
-        <div class="tool-item"><span class="chinese-term">画笔</span><div class="pinyin">huà bǐ</div><div class="english-term">paint brush</div></div>
-        <div class="tool-item"><span class="chinese-term">蜡刀</span><div class="pinyin">là dāo</div><div class="english-term">batik knife</div></div>
-        <div class="tool-item"><span class="chinese-term">绷架</span><div class="pinyin">bēng jià</div><div class="english-term">stretching frame</div></div>
+        <div class="tool-item"><div class="craft-icon">🔪</div><span class="chinese-term">刻刀</span><div class="pinyin">kè dāo</div><div class="english-term">carving knife</div></div>
+        <div class="tool-item"><div class="craft-icon">✂️</div><span class="chinese-term">剪刀</span><div class="pinyin">jiǎn dāo</div><div class="english-term">scissors</div></div>
+        <div class="tool-item"><div class="craft-icon">🖌️</div><span class="chinese-term">画笔</span><div class="pinyin">huà bǐ</div><div class="english-term">paint brush</div></div>
+        <div class="tool-item"><div class="craft-icon">🕯️🔪</div><span class="chinese-term">蜡刀</span><div class="pinyin">là dāo</div><div class="english-term">batik knife</div></div>
+        <div class="tool-item"><div class="craft-icon">🖼️</div><span class="chinese-term">绷架</span><div class="pinyin">bēng jià</div><div class="english-term">stretching frame</div></div>
     </div>
 
-    <!-- 简短的概念区分（保留刺绣与其他） -->
+    <!-- 概念区分 -->
     <div class="section-title"><i class="fas fa-book-open"></i> 概念区分 · Clarifications</div>
     <div class="grid-cards">
-        <div class="card"><div class="chinese-term">刺绣</div><div class="pinyin">cì xiù</div><div class="english-term">embroidery</div><div class="desc-bilingual"><div class="zh">针线</div><div class="en">needle & thread</div></div></div>
-        <div class="card"><div class="chinese-term">织锦</div><div class="pinyin">zhī jǐn</div><div class="english-term">brocade</div><div class="desc-bilingual"><div class="zh">织造图案</div><div class="en">woven pattern</div></div></div>
-        <div class="card"><div class="chinese-term">缂丝</div><div class="pinyin">kè sī</div><div class="english-term">kesi tapestry</div><div class="desc-bilingual"><div class="zh">通经断纬</div><div class="en">slit tapestry</div></div></div>
-        <div class="card"><div class="chinese-term">蜡染</div><div class="pinyin">là rǎn</div><div class="english-term">batik</div><div class="desc-bilingual"><div class="zh">蜡防染色</div><div class="en">wax-resist dye</div></div></div>
+        <div class="card"><div class="craft-icon">🪡</div><div class="chinese-term">刺绣</div><div class="pinyin">cì xiù</div><div class="english-term">embroidery</div><div class="desc-bilingual"><div class="zh">针线</div><div class="en">needle & thread</div></div></div>
+        <div class="card"><div class="craft-icon">🕸️🧵</div><div class="chinese-term">织锦</div><div class="pinyin">zhī jǐn</div><div class="english-term">brocade</div><div class="desc-bilingual"><div class="zh">织造图案</div><div class="en">woven pattern</div></div></div>
+        <div class="card"><div class="craft-icon">🔗🧵</div><div class="chinese-term">缂丝</div><div class="pinyin">kè sī</div><div class="english-term">kesi tapestry</div><div class="desc-bilingual"><div class="zh">通经断纬</div><div class="en">slit tapestry</div></div></div>
+        <div class="card"><div class="craft-icon">🕯️⬜</div><div class="chinese-term">蜡染</div><div class="pinyin">là rǎn</div><div class="english-term">batik</div><div class="desc-bilingual"><div class="zh">蜡防染色</div><div class="en">wax-resist dye</div></div></div>
     </div>
 
-    <!-- 结语 -->
     <hr>
     <div class="footer">
-        <p> 🧵 匠心·万象 | 30+ 手工艺品类 · 中英双语 · 拼音标注  🪡</p>
+        <p> 🧵 匠心·万象 | 30+ 手工艺品类 · 中英双语 · 拼音标注 · 图示  🪡</p>
         <p>刺绣 · 剪纸 · 泥塑 · 灯笼 · 风筝 · 蜡染 · 景泰蓝 · 木雕 · 更多</p>
         <p style="letter-spacing: 2px;">一针一线 · 一刀一纸 · 万象更新</p>
     </div>
